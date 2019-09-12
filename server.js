@@ -33,7 +33,7 @@ reviewApi(app, db);
 offerApi(app, db);
 mypassport(app, db, passport, LocalStrategy, bcrypt);
 
-app.get('/', function (req, res) {
+app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'), function (err) {
     if (err) {
       res.status(500).send(err)
