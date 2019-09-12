@@ -41,4 +41,8 @@ app.get('/', function (req, res) {
   })
 })
 
+app.get("/test",function(req,res){
+  res.send("test")
+})
+
 app.listen(process.env.PORT || 3000);

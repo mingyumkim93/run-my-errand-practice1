@@ -11,6 +11,7 @@ export class LoginPage extends React.Component {
     textChanged(ev) {
         this.setState({ [ev.target.id]: ev.target.value });
     }
+    
 
     sendLoginedUserToErrandsListPage(){
         axios.get("/isUnauthenticated").then((res)=>{
@@ -53,12 +54,13 @@ export class LoginPage extends React.Component {
     }
 
     componentDidMount(){
-        this.sendLoginedUserToErrandsListPage();
+        //this.sendLoginedUserToErrandsListPage();
     }
 
     render() {
         let { emailInput, passwordInput } = this.state;
         return <Container style={{height:"100%", margin:"0%"}} fluid>
+            
                 <Row className = "align-items-center" style={{height:"100%"}}>
                     <Col className="d-none d-sm-block" sm="6" style={{height:"100%", padding:"0%"}}>
                         <Media style={{ maxWidth: "100%", position:"absolute",top:"50%",left:"50%",
@@ -72,6 +74,9 @@ export class LoginPage extends React.Component {
                             </Col>
                             <Col style={{marginTop:"5%"}} sm="6">
                                 <Input type="password" id="passwordInput" placeholder="Password" name="passwordInput" onChange={ev => this.textChanged(ev)} onKeyPress={target=> this.handleKeyPress(target)}/>
+                                <Button onClick={()=>{
+                                      axios.get("/test").then(res=>console.log(res.data)).catch(err=>console.log(err));
+                                    }}>test</Button>
                             </Col>
                         </Row>
                         <Row >
@@ -82,6 +87,7 @@ export class LoginPage extends React.Component {
                             </Col>
                             <Col style={{marginTop:"5%"}} sm="6">
                                 <Button style={{ width: "100%" }} outline color="primary" onClick={() => this.props.history.push("/signup")} >Sign Up</Button>
+                                
                             </Col>
                         </Row>
                     </Col>
