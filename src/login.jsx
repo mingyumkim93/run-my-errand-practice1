@@ -54,7 +54,7 @@ export class LoginPage extends React.Component {
     }
 
     componentDidMount(){
-        //this.sendLoginedUserToErrandsListPage();
+        this.sendLoginedUserToErrandsListPage();
     }
 
     render() {
@@ -74,9 +74,7 @@ export class LoginPage extends React.Component {
                             </Col>
                             <Col style={{marginTop:"5%"}} sm="6">
                                 <Input type="password" id="passwordInput" placeholder="Password" name="passwordInput" onChange={ev => this.textChanged(ev)} onKeyPress={target=> this.handleKeyPress(target)}/>
-                                <Button onClick={()=>{
-                                      axios.get("/test").then(res=>console.log(res.data)).catch(err=>console.log(err));
-                                    }}>test</Button>
+                               
                             </Col>
                         </Row>
                         <Row >
