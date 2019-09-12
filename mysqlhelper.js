@@ -14,11 +14,11 @@
 
 let options={
     protocol: "mysql",
-    host: 'localhost',
+    host: 'eu-cdbr-west-02.cleardb.net',
     port: 3306,
-    user     : "dbuser",
-    password : "Daylight12!",
-    database : 'crm'
+    user     : "b33bf497ae745e",
+    password : "e54b3cff",
+    database : 'heroku_1ae6bf56fb02022'
 }
 
 let mysql=require("mysql");
