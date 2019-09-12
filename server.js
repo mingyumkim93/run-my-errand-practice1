@@ -33,7 +33,7 @@ reviewApi(app, db);
 offerApi(app, db);
 mypassport(app, db, passport, LocalStrategy, bcrypt);
 
-app.listen(8080);
+app.listen(3000);
 
 
 app.get('/*', function (req, res) {
