@@ -59,7 +59,7 @@ export class LoginPage extends React.Component {
 
     render() {
         let { emailInput, passwordInput } = this.state;
-        return <Container style={{height:"100%", margin:"0%"}} fluid>
+        return <Container style={{height:"100%" ,marginTop:"150px"}} fluid>
             
                 <Row className = "align-items-center" style={{height:"100%"}}>
                     <Col className="d-none d-sm-block" sm="6" style={{height:"100%", padding:"0%"}}>
