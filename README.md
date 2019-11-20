@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-To get explanation about this application, please refer Run-My-Errand-Presentation.pdf file in the same repository.
+Please also refer to Run-My-Errand-Presentation.pdf file in the same repository.
 
 ## Available Scripts
 
